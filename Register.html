@@ -7,29 +7,39 @@
   <link rel="stylesheet" href="Register.css">
   <script src="Register.js"></script>
 
-
 </head>
 <body>
-
- 
-
-  
-
   <!-- User Input -->
-
   <div class="Small-container">
     <h1>Sign Up</h1>
-    <form>
-      <label for="username">Username:</label>
+    <form id="multi-step-form">
+      <label for="username"> Nama Kelompok </label>
       <input type="text" id="username" name="username" required>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-      <input type="submit" value="Sign Up"><form id="multi-step-form">
+      
+      <label for="password">Password </label>
+      <div class="password-input">
+        <input type="password" id="password" name="password" required>
+        <span class="toggle-password" onclick="togglePassword()">Show</span>
+      </div>
+      
+      <div class="password-input">
+        <label for="password">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <span class="toggle-password" onclick="toggleConfirmPassword()">Show</span>
+      </div>
 
-       
+      <div class="binusian-options">
+        <button id="binusian" onclick="selectOption('binusian')"><span>Binusian</span></button>
+        <button id="nonBinusian" onclick="selectOption('nonBinusian')"><span>Non-Binusian</span></button>
+        
+      </div>
+      
+      <input type="button" value="Next" onclick="nextStep()">
+    </form>
+    <div id="progress-bar"></div>
+  </div>
 
   
-
-  
+</div>
 </body>
 </html>

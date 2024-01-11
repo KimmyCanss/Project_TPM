@@ -9,14 +9,19 @@ body, html {
 
 /* Animasi h1 */
 h1 {
-  animation: fadeInUp 6s ease forwards; /* Animation effect for the header */
-  opacity: 0;
+  animation: popUpAnimation 0.5s ease forwards; /* Add pop-up animation */
+  opacity: 0; /* Start with opacity 0 for animation */
+  animation-delay: 0.3s; /* Delay the animation for a better effect */
 }
 
-@keyframes fadeInUp {
+@keyframes popUpAnimation {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
   to {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -80,3 +85,162 @@ input[type="submit"]:hover {
 }
 
 /*  */
+
+/* Password visibility toggle */
+.password-input {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Binusian selection */
+label[for="binusian"],
+select#binusian {
+  margin-top: 15px;
+}
+
+/* Progress bar */
+#progress-bar {
+  height: 10px;
+  width: 0;
+  background-color: #fff;
+  margin-top: 15px;
+}
+
+/* Adjustments for the hover effect */
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  transform: scale(1.05);
+  background-color: #450062;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+/* Add this for Confirm Password toggle */
+.password-input {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+}
+
+
+/* Your existing CSS styles */
+/* Add this for step content visibility */
+.step-content {
+  opacity: 0;
+  animation: popUpAnimation 0.5s ease forwards;
+}
+
+@keyframes popUpAnimation {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ... (other styles) */
+
+/* Styling for selected option */
+.selected {
+  background-color: #450062; /* Example color for the selected button */
+  color: #fff; /* Example color for text on the selected button */
+}
+
+
+/* Styling for the "Nama Kelompok," "Password," and "Confirm Password" elements */
+label[for="username"],
+label[for="password"],
+label[for="confirmPassword"] {
+  color: rgb(18, 17, 17); 
+  font-size: 15px; 
+  text-align: left; /* Align the text to the left */
+  display: block; /* Ensure labels display as blocks to align to the left */
+  width: 100%; 
+}
+
+input#username,
+input#password,
+input#confirmPassword {
+  border: 2px solid #000000; /* Example border for the input fields */
+  border-radius: 5px; /* Example border radius for the input fields */
+  color: #100b0b; /* Example text color for the input fields */
+  background-color: #9747FF; /* Example background color for the input fields */
+  padding: 8px; /* Example padding for the input fields */
+  /* Add any other desired styles */
+}
+
+
+/* Styling for Binusian and Non-Binusian buttons */
+
+/* Styling for Binusian and Non-Binusian buttons */
+#binusian,
+#nonBinusian {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#binusian:before,
+#nonBinusian:before {
+  content: '';
+  display: inline-block;
+  width: 10px; /* Adjust as needed */
+  height: 10px; /* Adjust as needed */
+  margin-right: 10px; /* Adjust as needed */
+  border: 2px solid #000000; /* Example border for the icon */
+  border-radius: 50%; /* To create a circle */
+}
+
+#binusian {
+  color: hsl(0, 0%, 100%);
+  margin-right: 10px; /* Adjust to separate buttons */
+}
+
+#nonBinusian {
+  color: #f9f8f8;
+  margin-left: calc(10px + 150px); /* Calculate the total margin to match Binusian */
+  margin-top: -24px; /* Adjust the vertical position */
+
+}
+
+
+/* Example background color for the button text */
+#binusian span,
+#nonBinusian span {
+  background-color: #9747FF;
+  padding: 5px 0px; /* Adjust as needed */
+  border-radius: 10px; /* Example border radius */
+}
+
+/* Styling for selected option */
+.selected {
+  background-color: #450062; /* Example color for the selected button */
+  color: #fff; /* Example color for text on the selected button */
+}
+
+/* Rest of your existing CSS */
+
+
+
